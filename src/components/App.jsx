@@ -1,3 +1,5 @@
+
+
 export class App {
   //початковий стан
   state = {
@@ -6,3 +8,4 @@ export class App {
     bad: 0,
   };
 }
+//import React, { Component } from 'react';
