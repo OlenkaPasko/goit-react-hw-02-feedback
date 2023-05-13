@@ -10,23 +10,42 @@ export class App extends Component {
     neutral: 0,
     bad: 0,
   };
+  //загальнf кількість зібраних відгуків
+  countTotalFeedback = () => {
+    return this.state.bad + this.state.neutral + this.state.good;
+  };
 
-  countTotalFeedback = ({ good, neutral, bad }) => good + neutral + bad;
-  //countPositiveFeedbackPercentage;
+  //відсоток позитивних відгуків
+  countPositiveFeedbackPercentage = () => {
+    let percentage = 0;
+    if (this.countTotalFeedback() !== 0) {
+      percentage = Number.parseInt(
+        (this.state.good / this.countTotalFeedback()) * 100
+      );
+    }
+    return percentage;
+  };
 
   //рендер всього контенту
   render() {
     const { good, neutral, bad } = this.state;
     return (
-      <Section title="Statistics">
-        <Statistics
-          good={good}
-          neutral={neutral}
-          bad={bad}
-          total={this.countTotalFeedback(this.state)}
-          //positivePercentage
-        ></Statistics>
-      </Section>
+      <div>
+        <Section title="Please leave feedback">
+          
+        </Section>
+        <Section title="Statistics">
+          <Statistics
+            good={good}
+            neutral={neutral}
+            bad={bad}
+            total={this.countTotalFeedback(this.state)}
+            positivePercentage={this.countPositiveFeedbackPercentage(
+              this.state
+            )}
+          ></Statistics>
+        </Section>
+      </div>
     );
   }
 }
