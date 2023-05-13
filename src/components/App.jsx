@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { Section } from './Section/Section';
 import { Statistics } from './Statistics/Statistics';
+import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 
 export class App extends Component {
   //початковий стан
@@ -32,7 +33,10 @@ export class App extends Component {
     return (
       <div>
         <Section title="Please leave feedback">
-          
+          <FeedbackOptions
+            options={Object.keys(this.state)}
+            onLeaveFeedback={this.leaveFeedback}
+          />
         </Section>
         <Section title="Statistics">
           <Statistics
