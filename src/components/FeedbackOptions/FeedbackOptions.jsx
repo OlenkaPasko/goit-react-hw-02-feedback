@@ -1,19 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { BtnFeedback } from 'components/BtnFeedback/BtnFeedback';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <div>
       {options.map(option => {
         return (
-          <button
-            key={option}
-            type="button"
-            value={option}
-            onClick={onLeaveFeedback}
-          >
-            {option}
-          </button>
+          <li key={option}>
+            <BtnFeedback
+              key={option}
+              type="button"
+              value={option}
+              onClick={() => onLeaveFeedback(option)}
+            >
+              {option}
+            </BtnFeedback>
+          </li>
         );
       })}
     </div>

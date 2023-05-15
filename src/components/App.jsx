@@ -11,6 +11,11 @@ export class App extends Component {
     neutral: 0,
     bad: 0,
   };
+
+  leaveFeedback = event => {
+    this.setState({ [event]: this.state[event] + 1 });
+  };
+
   //загальнf кількість зібраних відгуків
   countTotalFeedback = () => {
     return this.state.bad + this.state.neutral + this.state.good;
