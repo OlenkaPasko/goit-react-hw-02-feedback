@@ -13,24 +13,34 @@ export const Statistics = ({
   return total ? (
     <ul className={css.statList}>
       <li>
-        <p className={css.discrStatistic}>Good:</p>
-        <span className={css.result}>{good}</span>
+        <p className={css.discrStatistic}>
+          Good:
+          <span className="result">{good}</span>
+        </p>
       </li>
       <li>
-        <p className={css.discrStatistic}>Neutral:</p>
-        <span className={css.result}>{neutral}</span>
+        <p className={css.discrStatistic}>
+          Neutral:
+          <span className="result">{neutral}</span>
+        </p>
       </li>
       <li>
-        <p className={css.discrStatistic}>Bad:</p>
-        <span className={css.result}>{bad}</span>
+        <p className={css.discrStatistic}>
+          Bad:
+          <span className="result">{bad}</span>
+        </p>
       </li>
       <li>
-        <p className={css.discrStatistic}>Total:</p>
-        <span className={css.result}>{total}</span>
+        <p className={css.discrStatistic}>
+          Total:
+          <span className="result">{total}</span>
+        </p>
       </li>
       <li>
-        <p className={css.discrStatistic}>Positive feedbeack:</p>
-        <span className={css.result}>{positivePercentage}%</span>
+        <p className={css.discrStatistic}>
+          Positive feedbeack:
+          <span className="result">{positivePercentage}%</span>
+        </p>
       </li>
     </ul>
   ) : (
