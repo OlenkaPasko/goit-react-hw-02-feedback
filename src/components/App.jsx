@@ -4,6 +4,7 @@ import { Section } from './Section/Section';
 import { Statistics } from './Statistics/Statistics';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 
+
 export class App extends Component {
   //початковий стан
   state = {

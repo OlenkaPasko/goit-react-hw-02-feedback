@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Notification } from '../Notification/Notification';
 
 export const Statistics = ({
   good,
   neutral,
   bad,
   total,
-  positivePercentag,
+  positivePercentage,
 }) => {
   return (
     <ul className="stat-list">
@@ -28,8 +29,9 @@ export const Statistics = ({
       </li>
       <li>
         <p className="discr-statistic">Positive feedbeack:</p>
-        <span className="result">{positivePercentag}%</span>
+        <span className="result">{positivePercentage}%</span>
       </li>
+      <Notification message="There is no feedback" />
     </ul>
   );
 };
