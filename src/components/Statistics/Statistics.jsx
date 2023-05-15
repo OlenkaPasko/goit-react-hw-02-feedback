@@ -9,7 +9,7 @@ export const Statistics = ({
   total,
   positivePercentage,
 }) => {
-  return (
+  return total ? (
     <ul className="stat-list">
       <li>
         <p className="discr-statistic">Good:</p>
@@ -31,8 +31,9 @@ export const Statistics = ({
         <p className="discr-statistic">Positive feedbeack:</p>
         <span className="result">{positivePercentage}%</span>
       </li>
-      <Notification message="There is no feedback" />
     </ul>
+  ) : (
+    <Notification message="There is no feedback" />
   );
 };
 Statistics.propTypes = {
