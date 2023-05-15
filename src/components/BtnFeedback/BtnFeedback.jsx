@@ -14,7 +14,6 @@ export const BtnFeedback = ({
 };
 
 BtnFeedback.propTypes = {
-  icon: PropTypes.any,
   type: PropTypes.string.isRequired,
   children: PropTypes.string.isRequired,
 };

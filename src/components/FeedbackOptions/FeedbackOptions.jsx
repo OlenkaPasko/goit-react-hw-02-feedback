@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { BtnFeedback } from 'components/BtnFeedback/BtnFeedback';
+import css from './FeedbackOption.module.css';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <div>
+    <div className={css[`btnBlock`]}>
       {options.map(option => {
         return (
           <li key={option}>
